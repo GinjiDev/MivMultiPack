@@ -9,9 +9,11 @@ class AsyncRandom:
         self.modulus = 2**32
 
     async def _generate_random_number(self):
+        # Получаем время в асинхронном контексте
         current_time = asyncio.get_event_loop().time()
         if self.seed is None:
-            self.seed = int(current_time * 1000)
+            self.seed = int(current_time * 1000)  # Инициализация seed на основе текущего времени
+        # Линейный конгруэнтный метод для генерации псевдослучайных чисел
         self.seed = (self.multiplier * self.seed + self.increment) % self.modulus
         random_number = self.seed % (10 ** self.digits)
         return random_number
@@ -34,13 +36,13 @@ class AsyncRandomRange:
         if self.exclude_bounds:
             self.start += 1
             self.stop -= 1
-        current_time = asyncio.get_event_loop().time()
-        self.seed = int(current_time * 1000)
+        self.seed = int(asyncio.get_event_loop().time() * 1000)
         self.multiplier = 1664525
         self.increment = 1013904223
         self.modulus = 2**32
 
     async def _generate_random_number(self):
+        # Линейный конгруэнтный метод для генерации псевдослучайных чисел
         self.seed = (self.multiplier * self.seed + self.increment) % self.modulus
         random_number = self.seed % (self.stop - self.start) + self.start
         return random_number

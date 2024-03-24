@@ -1,4 +1,4 @@
-import MivMultiPack, asyncio
+import MivMultiPack, asyncio, time
 
 module = MivMultiPack
 
@@ -14,8 +14,9 @@ async def main():
     #start -> Начальное число
     #stop -> Конечное число
     #exclude_bounds -> определяет, исключать ли граничные значения из диапазона, например при True -39 и 39, при False -40 и 40
-    generate_range = module.AsyncRandomRange(start=-40, stop=40, exclude_bounds=False)
+    generate_range = module.AsyncRandomRange(start=0, stop=4, exclude_bounds=1)
     var = await generate_range.generate_random_number_async()
     print(var)
+        
 
 asyncio.run(main())

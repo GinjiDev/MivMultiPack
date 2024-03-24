@@ -1,5 +1,3 @@
-![Задний фон](https://i.pinimg.com/564x/da/ac/de/daacde957999e2869480796333d567b7.jpg)
-
 <div style="background-image: url('https://i.pinimg.com/564x/da/ac/de/daacde957999e2869480796333d567b7.jpg'); background-size: cover; padding: 20px;">
 
 <p align="center">

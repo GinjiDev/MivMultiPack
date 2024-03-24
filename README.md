@@ -1,5 +1,3 @@
-<div style="background-image: url('https://i.pinimg.com/564x/da/ac/de/daacde957999e2869480796333d567b7.jpg'); background-size: cover; padding: 20px;">
-
 <p align="center">
 <img src="https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54" alt="Python">
 <img src="https://img.shields.io/badge/Discord-%235865F2.svg?style=for-the-badge&logo=discord&logoColor=white" alt="Discord">
@@ -26,5 +24,3 @@
 ```bash
 pip install MivMultiPack
 ```
-
-</div>

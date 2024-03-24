@@ -1,10 +1,10 @@
-import asyncio, time
+import asyncio
 
 class async_random:
     
     def __init__(self, seed=None, digits=8):
         if seed is None:
-            self.seed = int(time.time() * 1000)  # Инициализация seed на основе текущего времени
+            self.seed = int(asyncio.get_event_loop().time() * 1000)  # Инициализация seed на основе текущего времени
         else:
             self.seed = seed
         self.digits = digits
@@ -40,7 +40,7 @@ class async_random_range:
             self.stop -= 1
         else:
             self.stop += 1
-        self.seed = int(time.time() * 1000)
+        self.seed = int(asyncio.get_event_loop().time() * 1000)
         self.multiplier = 1664525
         self.increment = 1013904223
         self.modulus = 2**32

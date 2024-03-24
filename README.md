@@ -1,9 +1,7 @@
 <p align="center">
     <img src="images/banner.gif">
 </p>
-# <p align="center">
-    🐺MivMultiPack🦊
-  </p>
+# <p align="center">🐺MivMultiPack🦊</p>
 
 **Добро пожаловать в библиотеку Mivian!**
 

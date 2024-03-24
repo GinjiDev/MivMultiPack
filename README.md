@@ -3,7 +3,7 @@
     <img src="images/banner.gif">
 </p>
 
-**Добро пожаловать в библиотеку MivMultiPack!**
+<p align="center">**Добро пожаловать в библиотеку MivMultiPack!**</p>
 
 ## Особенности
 

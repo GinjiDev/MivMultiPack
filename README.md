@@ -6,7 +6,7 @@
 
 # <p align="center">🐺MivMultiPack🦊</p>
 <p align="center">
-    <img src="images/banner.gif">
+    <img src="static/images/banner.gif">
 </p>
 
 **<p align="center">Добро пожаловать в библиотеку MivMultiPack!</p>**

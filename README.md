@@ -1,4 +1,4 @@
-<div style="background-image: url('images/banner.gif'); background-size: cover; padding: 20px;">
+<div style="background-image: url('https://i.pinimg.com/564x/da/ac/de/daacde957999e2869480796333d567b7.jpg'); background-size: cover; padding: 20px;">
 
 <p align="center">
 <img src="https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54" alt="Python">

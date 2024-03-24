@@ -2,8 +2,9 @@ import MivMultiPack, time
 
 module = MivMultiPack
 
-generate = module.async_random(seed=2, digits=1)
+generate = module.async_random_range(start=-1, stop=2)
 
 while True:
-    print(generate.generate_random_number())
-    time.sleep(1)
+    var = generate.generate_random_number()
+    print(var)
+    time.sleep(0.2)

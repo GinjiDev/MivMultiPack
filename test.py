@@ -1,14 +1,8 @@
-import MivMultiPack, asyncio, time
-
-module = MivMultiPack.AsyncRandom()
-
-
+import MivMultiPack, asyncio
 
 async def main():
-    random_from_array = await module.get_random_from_array(-10, 10)
-    print("Random number from array:", random_from_array)
-    
-    random_from_array = await module.get_algorithm()
-    print("Random number from array:", random_from_array)
+    module = MivMultiPack.miv_lavapi.lavapi()
+    go = await module.get_track_info(identifier="ytsearch:dabstep", password="1029384756r", full_error=True)
+    print(go)
     
 asyncio.run(main())

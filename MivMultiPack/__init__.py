@@ -4,3 +4,4 @@ __license__ = 'MIT'
 __version__ = '0.0.1'
 
 from .miv_random import *
+from .miv_lavapi import *

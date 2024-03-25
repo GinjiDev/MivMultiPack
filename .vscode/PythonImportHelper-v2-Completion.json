@@ -1,5 +1,14 @@
 [
     {
+        "label": "aiohttp",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "aiohttp",
+        "description": "aiohttp",
+        "detail": "aiohttp",
+        "documentation": {}
+    },
+    {
         "label": "asyncio",
         "kind": 6,
         "isExtraImport": true,
@@ -18,21 +27,21 @@
         "documentation": {}
     },
     {
+        "label": "lavapi",
+        "kind": 6,
+        "importPath": "MivMultiPack.miv_lavapi",
+        "description": "MivMultiPack.miv_lavapi",
+        "peekOfCode": "class lavapi:\n    def __init__(self) -> None:\n        pass\n    async def get_track_info(self, identifier: str, password: str, lavalink_adress='localhost', lavalink_port=2333, info=True, full_error=False):\n        url = f\"http://{lavalink_adress}:{lavalink_port}/v4/loadtracks\"\n        params = {'identifier': identifier}\n        headers = {\n            'Authorization': password,\n            'Accept': 'application/json'\n        }",
+        "detail": "MivMultiPack.miv_lavapi",
+        "documentation": {}
+    },
+    {
         "label": "AsyncRandom",
         "kind": 6,
         "importPath": "MivMultiPack.miv_random",
         "description": "MivMultiPack.miv_random",
         "peekOfCode": "class AsyncRandom:\n    def __init__(self) -> None:\n        self.multiplier = 1664525\n        self.increment = 1013904223\n        self.modulus = 2**32\n    async def get_algorithm(\n        self,\n        seed: any = None\n    ) -> int:\n        # If seed is not provided, create it based on the",
         "detail": "MivMultiPack.miv_random",
-        "documentation": {}
-    },
-    {
-        "label": "module",
-        "kind": 5,
-        "importPath": "test",
-        "description": "test",
-        "peekOfCode": "module = MivMultiPack.AsyncRandom()\nasync def main():\n    random_from_array = await module.get_random_from_array(-10, 10)\n    print(\"Random number from array:\", random_from_array)\n    random_from_array = await module.get_algorithm()\n    print(\"Random number from array:\", random_from_array)\nasyncio.run(main())",
-        "detail": "test",
         "documentation": {}
     }
 ]

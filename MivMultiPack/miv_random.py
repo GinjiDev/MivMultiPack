@@ -2,25 +2,22 @@ import asyncio
 
 
 class AsyncRandom:
-    def __init__(
-        self,
-    ) -> None:
-
+    def __init__(self) -> None:
         self.multiplier = 1664525
         self.increment = 1013904223
         self.modulus = 2**32
 
-    def get_algorithm(
+    async def get_algorithm(
         self,
         seed: any = None
     ) -> int:
-        # Если сид не указан создадим его
+        # If seed is not provided, create it based on the
+        # current event loop time
         if not seed:
-            # Инициализация seed на основе текущего времени
             current_time = asyncio.get_event_loop().time()
             seed = int(current_time * 1000)
 
-        # Линейный конгруэнтный метод для генерации псевдослучайных чисел
+        # Linear congruential method for generating pseudo-random numbers
         return ((self.multiplier * seed + self.increment) % self.modulus)
 
     async def get_random_number(
@@ -28,7 +25,7 @@ class AsyncRandom:
         seed: any = None,
         digits: int = 8
     ) -> int:
-        return self.get_algorithm(seed) % (10 ** digits)
+        return await self.get_algorithm(seed) % (10 ** digits)
 
     async def get_random_from_array(
         self,
@@ -36,21 +33,20 @@ class AsyncRandom:
         stop_value: int,
         exclude_bounds: bool = False
     ) -> int:
-        if start_value < stop_value:
-            # Если значение стартовое значение меньше конечного
-            # Меняем их местами
+        # Ensure start_value is less than or equal to stop_value
+        if start_value > stop_value:
             start_value, stop_value = stop_value, start_value
 
+        # Adjust for excluding bounds
         if exclude_bounds:
-            # Если exclude_bounds установлен в True и start_value равно stop_value,
-            # возвращаем start_value
-            if start_value == stop_value:
-                return start_value
-            
-            start_value += 1
-            stop_value -= 1
+            if start_value < 0:
+                start_value += 1
+            if stop_value > 0:
+                stop_value -= 1
 
-        return self.get_algorithm() % (stop_value - start_value) + start_value
+        # Calculate the range and generate a random number within it
+        range_size = stop_value - start_value + 1
+        return (await self.get_algorithm() % range_size) + start_value
 
     async def get_random_element(
         self,

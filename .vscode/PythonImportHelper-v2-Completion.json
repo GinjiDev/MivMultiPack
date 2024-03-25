@@ -22,7 +22,7 @@
         "kind": 6,
         "importPath": "MivMultiPack.miv_random",
         "description": "MivMultiPack.miv_random",
-        "peekOfCode": "class AsyncRandom:\n    def __init__(\n        self,\n    ) -> None:\n        self.multiplier = 1664525\n        self.increment = 1013904223\n        self.modulus = 2**32\n    def get_algorithm(\n        self,\n        seed: any = None",
+        "peekOfCode": "class AsyncRandom:\n    def __init__(self) -> None:\n        self.multiplier = 1664525\n        self.increment = 1013904223\n        self.modulus = 2**32\n    async def get_algorithm(\n        self,\n        seed: any = None\n    ) -> int:\n        # If seed is not provided, create it based on the",
         "detail": "MivMultiPack.miv_random",
         "documentation": {}
     },
@@ -31,7 +31,7 @@
         "kind": 5,
         "importPath": "test",
         "description": "test",
-        "peekOfCode": "module = MivMultiPack.AsyncRandom()\nasync def main():\n    random_from_array = await module.get_random_from_array(-10, 10)\n    print(\"Random number from array:\", random_from_array)\nasyncio.run(main())",
+        "peekOfCode": "module = MivMultiPack.AsyncRandom()\nasync def main():\n    random_from_array = await module.get_random_from_array(-10, 10)\n    print(\"Random number from array:\", random_from_array)\n    random_from_array = await module.get_algorithm()\n    print(\"Random number from array:\", random_from_array)\nasyncio.run(main())",
         "detail": "test",
         "documentation": {}
     }

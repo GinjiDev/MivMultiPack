@@ -31,7 +31,7 @@
         "kind": 5,
         "importPath": "test",
         "description": "test",
-        "peekOfCode": "module = MivMultiPack.AsyncRandom()\nasync def main():\n    while True:\n        random_from_array = await module.get_random_from_array(-10, 10)\n        print(\"Random number from array:\", random_from_array)\n        time.sleep(1)\nasyncio.run(main())",
+        "peekOfCode": "module = MivMultiPack.AsyncRandom()\nasync def main():\n    random_from_array = await module.get_random_from_array(-10, 10)\n    print(\"Random number from array:\", random_from_array)\nasyncio.run(main())",
         "detail": "test",
         "documentation": {}
     }

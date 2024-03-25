@@ -12,7 +12,7 @@ class AsyncRandom:
 
     def get_algorithm(
         self,
-        seed: int or None = None
+        seed: any = None
     ) -> int:
         # Если сид не указан создадим его
         if not seed:
@@ -25,7 +25,7 @@ class AsyncRandom:
 
     async def get_random_number(
         self,
-        seed: int or None = None,
+        seed: any = None,
         digits: int = 8
     ) -> int:
         return self.get_algorithm(seed) % (10 ** digits)
@@ -46,3 +46,12 @@ class AsyncRandom:
             stop_value -= 1
 
         return self.get_algorithm() % (stop_value - start_value) + start_value
+
+    async def get_random_element(
+        self,
+        array: any
+    ) -> int:
+        current_time = str(asyncio.get_event_loop().time())
+        hash = int(current_time[-3:])
+        index = int(hash / 1000 * len(array))
+        return array[index]

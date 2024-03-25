@@ -1,54 +1,48 @@
 import asyncio
 
+
 class AsyncRandom:
-    def __init__(self, seed=None, digits=8):
-        self.seed = seed
-        self.digits = digits
+    def __init__(
+        self,
+    ) -> None:
+
         self.multiplier = 1664525
         self.increment = 1013904223
         self.modulus = 2**32
 
-    async def _generate_random_number(self):
-        # Получаем время в асинхронном контексте
-        current_time = asyncio.get_event_loop().time()
-        if self.seed is None:
-            self.seed = int(current_time * 1000)  # Инициализация seed на основе текущего времени
+    def get_algorithm(
+        self,
+        seed: int or None = None
+    ) -> int:
+        # Если сид не указан создадим его
+        if not seed:
+            # Инициализация seed на основе текущего времени
+            current_time = asyncio.get_event_loop().time()
+            seed = int(current_time * 1000)
+
         # Линейный конгруэнтный метод для генерации псевдослучайных чисел
-        self.seed = (self.multiplier * self.seed + self.increment) % self.modulus
-        random_number = self.seed % (10 ** self.digits)
-        return random_number
-        
-    async def generate_random_number_async(self):
-        return await self._generate_random_number()
+        return ((self.multiplier * seed + self.increment) % self.modulus)
 
-    def generate_random_number_sync(self):
-        return asyncio.run(self.generate_random_number_async())
+    async def get_random_number(
+        self,
+        seed: int or None = None,
+        digits: int = 8
+    ) -> int:
+        return self.get_algorithm(seed) % (10 ** digits)
 
-class AsyncRandomRange:
-    def __init__(self, start, stop, exclude_bounds=False):
-        if start < stop:
-            self.start = start
-            self.stop = stop
-        else:
-            self.start = stop
-            self.stop = start
-        self.exclude_bounds = exclude_bounds
-        if self.exclude_bounds:
-            self.start += 1
-            self.stop -= 1
-        self.seed = int(asyncio.get_event_loop().time() * 1000)
-        self.multiplier = 1664525
-        self.increment = 1013904223
-        self.modulus = 2**32
+    async def get_random_from_array(
+        self,
+        start_value: int,
+        stop_value: int,
+        exclude_bounds: bool = False
+    ) -> int:
+        if start_value < stop_value:
+            # Если значение стартовое значение меньше конечного
+            # Меняем их местами
+            start_value, stop_value = stop_value, start_value
 
-    async def _generate_random_number(self):
-        # Линейный конгруэнтный метод для генерации псевдослучайных чисел
-        self.seed = (self.multiplier * self.seed + self.increment) % self.modulus
-        random_number = self.seed % (self.stop - self.start) + self.start
-        return random_number
-    
-    async def generate_random_number_async(self):
-        return await self._generate_random_number()
+        if exclude_bounds:
+            start_value += 1
+            stop_value -= 1
 
-    def generate_random_number_sync(self):
-        return asyncio.run(self.generate_random_number_async())
+        return self.get_algorithm() % (stop_value - start_value) + start_value

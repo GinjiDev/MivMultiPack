@@ -1,0 +1,38 @@
+[
+    {
+        "label": "asyncio",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "asyncio",
+        "description": "asyncio",
+        "detail": "asyncio",
+        "documentation": {}
+    },
+    {
+        "label": "MivMultiPack,",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "MivMultiPack.",
+        "description": "MivMultiPack.",
+        "detail": "MivMultiPack.",
+        "documentation": {}
+    },
+    {
+        "label": "AsyncRandom",
+        "kind": 6,
+        "importPath": "MivMultiPack.miv_random",
+        "description": "MivMultiPack.miv_random",
+        "peekOfCode": "class AsyncRandom:\n    def __init__(\n        self,\n    ) -> None:\n        self.multiplier = 1664525\n        self.increment = 1013904223\n        self.modulus = 2**32\n    def get_algorithm(\n        self,\n        seed: any = None",
+        "detail": "MivMultiPack.miv_random",
+        "documentation": {}
+    },
+    {
+        "label": "module",
+        "kind": 5,
+        "importPath": "test",
+        "description": "test",
+        "peekOfCode": "module = MivMultiPack\nasync def main():\n    #генерация случайного числа\n    #seed -> инициализации начального состояния генератора, если не назначено то число генерируется случайно\n    #digits -> управляет количеством цифр в случайном числе\n    generate = module.AsyncRandom(seed=8, digits=3)\n    var = await generate.generate_random_number_async()\n    print(var)\n    #генерация случайного диапозонного числа\n    #start -> Начальное число",
+        "detail": "test",
+        "documentation": {}
+    }
+]

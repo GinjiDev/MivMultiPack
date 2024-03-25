@@ -42,6 +42,11 @@ class AsyncRandom:
             start_value, stop_value = stop_value, start_value
 
         if exclude_bounds:
+            # Если exclude_bounds установлен в True и start_value равно stop_value,
+            # возвращаем start_value
+            if start_value == stop_value:
+                return start_value
+            
             start_value += 1
             stop_value -= 1
 

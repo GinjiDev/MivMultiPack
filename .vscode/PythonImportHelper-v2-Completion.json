@@ -31,7 +31,7 @@
         "kind": 5,
         "importPath": "test",
         "description": "test",
-        "peekOfCode": "module = MivMultiPack\nasync def main():\n    #генерация случайного числа\n    #seed -> инициализации начального состояния генератора, если не назначено то число генерируется случайно\n    #digits -> управляет количеством цифр в случайном числе\n    generate = module.AsyncRandom(seed=8, digits=3)\n    var = await generate.generate_random_number_async()\n    print(var)\n    #генерация случайного диапозонного числа\n    #start -> Начальное число",
+        "peekOfCode": "module = MivMultiPack.AsyncRandom()\nasync def main():\n    while True:\n        random_from_array = await module.get_random_from_array(-10, 10)\n        print(\"Random number from array:\", random_from_array)\n        time.sleep(1)\nasyncio.run(main())",
         "detail": "test",
         "documentation": {}
     }

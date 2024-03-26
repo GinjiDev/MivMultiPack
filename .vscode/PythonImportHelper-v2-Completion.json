@@ -43,5 +43,14 @@
         "peekOfCode": "class AsyncRandom:\n    def __init__(self) -> None:\n        self.multiplier = 1664525\n        self.increment = 1013904223\n        self.modulus = 2**32\n    async def get_algorithm(\n        self,\n        seed: any = None\n    ) -> int:\n        # If seed is not provided, create it based on the",
         "detail": "MivMultiPack.miv_random",
         "documentation": {}
+    },
+    {
+        "label": "utils",
+        "kind": 6,
+        "importPath": "MivMultiPack.miv_utils",
+        "description": "MivMultiPack.miv_utils",
+        "peekOfCode": "class utils:\n    def __init__(self) -> None:\n        self.translit_dict = {\n            'a': 'а', 'b': 'б', 'c': 'ц', 'd': 'д', 'e': 'е', 'f': 'ф', 'g': 'г',\n            'h': 'х', 'i': 'и', 'j': 'й', 'k': 'к', 'l': 'л', 'm': 'м', 'n': 'н',\n            'o': 'о', 'p': 'п', 'q': 'к', 'r': 'р', 's': 'с', 't': 'т', 'u': 'у',\n            'v': 'в', 'w': 'в', 'x': 'кс', 'y': 'й', 'z': 'з',\n            'A': 'А', 'B': 'Б', 'C': 'Ц', 'D': 'Д', 'E': 'Е', 'F': 'Ф', 'G': 'Г',\n            'H': 'Х', 'I': 'И', 'J': 'Й', 'K': 'К', 'L': 'Л', 'M': 'М', 'N': 'Н',\n            'O': 'О', 'P': 'П', 'Q': 'К', 'R': 'Р', 'S': 'С', 'T': 'Т', 'U': 'У',",
+        "detail": "MivMultiPack.miv_utils",
+        "documentation": {}
     }
 ]

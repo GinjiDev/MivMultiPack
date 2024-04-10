@@ -59,4 +59,4 @@ class AsyncRandom:
 
 
 #псевдоним для класса
-ASYNCRANDOM = AsyncRandom
+ASYNCRANDOM = asyncrandom = AsyncRandom

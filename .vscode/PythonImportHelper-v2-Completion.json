@@ -27,7 +27,7 @@
         "documentation": {}
     },
     {
-        "label": "UTILS",
+        "label": "Utils",
         "importPath": "MivMultiPack",
         "description": "MivMultiPack",
         "isExtraImport": true,
@@ -48,7 +48,7 @@
         "kind": 5,
         "importPath": "MivMultiPack.miv_lavapi",
         "description": "MivMultiPack.miv_lavapi",
-        "peekOfCode": "LAVAPI = lavapi",
+        "peekOfCode": "LAVAPI = Lavapi = lavapi",
         "detail": "MivMultiPack.miv_lavapi",
         "documentation": {}
     },
@@ -66,7 +66,7 @@
         "kind": 5,
         "importPath": "MivMultiPack.miv_random",
         "description": "MivMultiPack.miv_random",
-        "peekOfCode": "ASYNCRANDOM = AsyncRandom",
+        "peekOfCode": "ASYNCRANDOM = asyncrandom = AsyncRandom",
         "detail": "MivMultiPack.miv_random",
         "documentation": {}
     },
@@ -84,7 +84,7 @@
         "kind": 5,
         "importPath": "MivMultiPack.miv_utils",
         "description": "MivMultiPack.miv_utils",
-        "peekOfCode": "UTILS = utils",
+        "peekOfCode": "UTILS = Utils = utils",
         "detail": "MivMultiPack.miv_utils",
         "documentation": {}
     }

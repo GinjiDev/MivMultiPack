@@ -60,4 +60,4 @@ class utils:
 
 
 #псевдоним для класса
-UTILS = utils
+UTILS = Utils = utils

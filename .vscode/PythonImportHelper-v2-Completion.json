@@ -39,7 +39,7 @@
         "kind": 6,
         "importPath": "MivMultiPack.miv_lavapi",
         "description": "MivMultiPack.miv_lavapi",
-        "peekOfCode": "class lavapi:\n    def __init__(self) -> None:\n        pass\n    async def get_track_info(self, identifier: str, password: str, lavalink_adress='localhost', lavalink_port=2333, info=True, full_error=False):\n        url = f\"http://{lavalink_adress}:{lavalink_port}/v4/loadtracks\"\n        params = {'identifier': identifier}\n        headers = {\n            'Authorization': password,\n            'Accept': 'application/json'\n        }",
+        "peekOfCode": "class lavapi:\n    def __init__(\n            self\n        ) -> None:\n        pass\n    async def get_track_info(\n            self,\n            identifier: str,\n            password: str,\n            lavalink_adress='localhost',",
         "detail": "MivMultiPack.miv_lavapi",
         "documentation": {}
     },

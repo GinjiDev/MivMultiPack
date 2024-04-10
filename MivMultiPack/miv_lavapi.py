@@ -1,10 +1,20 @@
 import aiohttp
 
 class lavapi:
-    def __init__(self) -> None:
+    def __init__(
+            self
+        ) -> None:
         pass
     
-    async def get_track_info(self, identifier: str, password: str, lavalink_adress='localhost', lavalink_port=2333, info=True, full_error=False):
+    async def get_track_info(
+            self,
+            identifier: str,
+            password: str,
+            lavalink_adress='localhost',
+            lavalink_port=2333,
+            info=True,
+            full_error=False
+        ) -> None:
         url = f"http://{lavalink_adress}:{lavalink_port}/v4/loadtracks"
         params = {'identifier': identifier}
         headers = {

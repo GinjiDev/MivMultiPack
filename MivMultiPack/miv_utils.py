@@ -21,7 +21,13 @@ class utils:
             self,
             translit: str
         ) -> None:
-        cyrillic_string = ''.join(self.translit_dict.get(char, char) for char in translit)
+        cyrillic_string = ''.join(
+            self.translit_dict.get(
+                
+                    char, char
+                )
+                for char in translit
+            )
         return cyrillic_string
 
     async def is_image_url(
@@ -32,7 +38,9 @@ class utils:
             async with aiohttp.ClientSession() as session:
                 async with session.head(url) as response:
                     content_type = response.headers.get('Content-Type', '').lower()
-                    return content_type.startswith('image/')
+                    return content_type.startswith(
+                            'image/'
+                        )
         except aiohttp.ClientError:
             return False
 
@@ -40,6 +48,12 @@ class utils:
             ms: int
         ) -> None:
         seconds = ms // 1000
-        minutes, seconds = divmod(seconds, 60)
-        hours, minutes = divmod(minutes, 60)
+        minutes, seconds = divmod(
+                seconds,
+                60
+            )
+        hours, minutes = divmod(
+                minutes,
+                60
+            )
         return hours, minutes, seconds

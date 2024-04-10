@@ -1,5 +1,5 @@
 import MivMultiPack, asyncio
-from MivMultiPack import *
+from MivMultiPack import UTILS
 async def main():
     print(await UTILS.duration(5000))
     

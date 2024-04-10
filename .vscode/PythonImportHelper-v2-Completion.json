@@ -27,7 +27,7 @@
         "documentation": {}
     },
     {
-        "label": "*",
+        "label": "UTILS",
         "importPath": "MivMultiPack",
         "description": "MivMultiPack",
         "isExtraImport": true,

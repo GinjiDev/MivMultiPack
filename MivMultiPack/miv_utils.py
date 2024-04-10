@@ -20,7 +20,7 @@ class AsyncUtils:
     async def translit_to_cyrillic(
             self,
             translit: str
-        ) -> None:
+        ):
         cyrillic_string = ''.join(
             self.translit_dict.get(
                 
@@ -45,6 +45,7 @@ class AsyncUtils:
             return False
 
     async def duration(
+            self,
             ms: int
         ) -> None:
         seconds = ms // 1000

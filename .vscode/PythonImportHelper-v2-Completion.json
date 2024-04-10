@@ -1,14 +1,5 @@
 [
     {
-        "label": "aiohttp",
-        "kind": 6,
-        "isExtraImport": true,
-        "importPath": "aiohttp",
-        "description": "aiohttp",
-        "detail": "aiohttp",
-        "documentation": {}
-    },
-    {
         "label": "asyncio",
         "kind": 6,
         "isExtraImport": true,
@@ -18,12 +9,11 @@
         "documentation": {}
     },
     {
-        "label": "MivMultiPack,",
-        "kind": 6,
+        "label": "ASYNCUTILS",
+        "importPath": "MivMultiPack",
+        "description": "MivMultiPack",
         "isExtraImport": true,
-        "importPath": "MivMultiPack.",
-        "description": "MivMultiPack.",
-        "detail": "MivMultiPack.",
+        "detail": "MivMultiPack",
         "documentation": {}
     },
     {
@@ -32,6 +22,31 @@
         "description": "MivMultiPack",
         "isExtraImport": true,
         "detail": "MivMultiPack",
+        "documentation": {}
+    },
+    {
+        "label": "ASYNCUTILS",
+        "importPath": "MivMultiPack",
+        "description": "MivMultiPack",
+        "isExtraImport": true,
+        "detail": "MivMultiPack",
+        "documentation": {}
+    },
+    {
+        "label": "ASYNCUTILS",
+        "importPath": "MivMultiPack",
+        "description": "MivMultiPack",
+        "isExtraImport": true,
+        "detail": "MivMultiPack",
+        "documentation": {}
+    },
+    {
+        "label": "aiohttp",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "aiohttp",
+        "description": "aiohttp",
+        "detail": "aiohttp",
         "documentation": {}
     },
     {

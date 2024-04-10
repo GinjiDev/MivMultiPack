@@ -1,6 +1,6 @@
 import aiohttp
 
-class lavapi:
+class AsyncLavApi:
     def __init__(
             self
         ) -> None:
@@ -51,4 +51,4 @@ class lavapi:
 #--------------------------------------------------------------------------------------
 
 #псевдоним для класса
-LAVAPI = Lavapi = lavapi
+ASYNCLAVAPI = asynclavapi = AsyncLavApi

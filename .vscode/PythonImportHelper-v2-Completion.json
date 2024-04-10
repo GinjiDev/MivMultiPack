@@ -27,7 +27,7 @@
         "documentation": {}
     },
     {
-        "label": "Utils",
+        "label": "ASYNCUTILS",
         "importPath": "MivMultiPack",
         "description": "MivMultiPack",
         "isExtraImport": true,
@@ -35,20 +35,20 @@
         "documentation": {}
     },
     {
-        "label": "lavapi",
+        "label": "AsyncLavApi",
         "kind": 6,
         "importPath": "MivMultiPack.miv_lavapi",
         "description": "MivMultiPack.miv_lavapi",
-        "peekOfCode": "class lavapi:\n    def __init__(\n            self\n        ) -> None:\n        pass\n    async def get_track_info(\n            self,\n            identifier: str,\n            password: str,\n            lavalink_adress='localhost',",
+        "peekOfCode": "class AsyncLavApi:\n    def __init__(\n            self\n        ) -> None:\n        pass\n    async def get_track_info(\n            self,\n            identifier: str,\n            password: str,\n            lavalink_adress='localhost',",
         "detail": "MivMultiPack.miv_lavapi",
         "documentation": {}
     },
     {
-        "label": "LAVAPI",
+        "label": "ASYNCLAVAPI",
         "kind": 5,
         "importPath": "MivMultiPack.miv_lavapi",
         "description": "MivMultiPack.miv_lavapi",
-        "peekOfCode": "LAVAPI = Lavapi = lavapi",
+        "peekOfCode": "ASYNCLAVAPI = asynclavapi = AsyncLavApi",
         "detail": "MivMultiPack.miv_lavapi",
         "documentation": {}
     },
@@ -71,20 +71,20 @@
         "documentation": {}
     },
     {
-        "label": "utils",
+        "label": "AsyncUtils",
         "kind": 6,
         "importPath": "MivMultiPack.miv_utils",
         "description": "MivMultiPack.miv_utils",
-        "peekOfCode": "class utils:\n    def __init__(\n            self\n        ) -> None:\n        self.translit_dict = {\n            'a': 'а', 'b': 'б', 'c': 'ц', 'd': 'д', 'e': 'е', 'f': 'ф', 'g': 'г',\n            'h': 'х', 'i': 'и', 'j': 'й', 'k': 'к', 'l': 'л', 'm': 'м', 'n': 'н',\n            'o': 'о', 'p': 'п', 'q': 'к', 'r': 'р', 's': 'с', 't': 'т', 'u': 'у',\n            'v': 'в', 'w': 'в', 'x': 'кс', 'y': 'й', 'z': 'з',\n            'A': 'А', 'B': 'Б', 'C': 'Ц', 'D': 'Д', 'E': 'Е', 'F': 'Ф', 'G': 'Г',",
+        "peekOfCode": "class AsyncUtils:\n    def __init__(\n            self\n        ) -> None:\n        self.translit_dict = {\n            'a': 'а', 'b': 'б', 'c': 'ц', 'd': 'д', 'e': 'е', 'f': 'ф', 'g': 'г',\n            'h': 'х', 'i': 'и', 'j': 'й', 'k': 'к', 'l': 'л', 'm': 'м', 'n': 'н',\n            'o': 'о', 'p': 'п', 'q': 'к', 'r': 'р', 's': 'с', 't': 'т', 'u': 'у',\n            'v': 'в', 'w': 'в', 'x': 'кс', 'y': 'й', 'z': 'з',\n            'A': 'А', 'B': 'Б', 'C': 'Ц', 'D': 'Д', 'E': 'Е', 'F': 'Ф', 'G': 'Г',",
         "detail": "MivMultiPack.miv_utils",
         "documentation": {}
     },
     {
-        "label": "UTILS",
+        "label": "ASYNCUTILS",
         "kind": 5,
         "importPath": "MivMultiPack.miv_utils",
         "description": "MivMultiPack.miv_utils",
-        "peekOfCode": "UTILS = Utils = utils",
+        "peekOfCode": "ASYNCUTILS = asyncutils = AsyncUtils",
         "detail": "MivMultiPack.miv_utils",
         "documentation": {}
     }

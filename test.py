@@ -1,6 +1,6 @@
 import MivMultiPack, asyncio
-from MivMultiPack import Utils
+from MivMultiPack import ASYNCUTILS
 async def main():
-    print(await Utils.duration(5000))
+    print(await ASYNCUTILS.duration(5000))
     
 asyncio.run(main())

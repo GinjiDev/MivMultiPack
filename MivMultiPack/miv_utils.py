@@ -1,6 +1,6 @@
 import aiohttp
 
-class utils:
+class AsyncUtils:
     
     def __init__(
             self
@@ -60,4 +60,4 @@ class utils:
 
 
 #псевдоним для класса
-UTILS = Utils = utils
+ASYNCUTILS = asyncutils = AsyncUtils

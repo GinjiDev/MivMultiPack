@@ -1,6 +1,6 @@
 import MivMultiPack, asyncio
-
+from MivMultiPack import *
 async def main():
-    print(await MivMultiPack.utils.ms_to_hours_minutes_seconds(ms=3661000))
+    print(await utils.duration(5000))
     
 asyncio.run(main())

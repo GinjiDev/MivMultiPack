@@ -20,14 +20,14 @@ class AsyncRandom:
         # Linear congruential method for generating pseudo-random numbers
         return ((self.multiplier * seed + self.increment) % self.modulus)
 
-    async def get_random_number(
+    async def random(
         self,
         seed: any = None,
         digits: int = 8
     ) -> int:
         return await self.get_algorithm(seed) % (10 ** digits)
 
-    async def get_random_from_array(
+    async def randint(
         self,
         start_value: int,
         stop_value: int,
@@ -48,7 +48,7 @@ class AsyncRandom:
         range_size = stop_value - start_value + 1
         return (await self.get_algorithm() % range_size) + start_value
 
-    async def get_random_element(
+    async def choice(
         self,
         array: any
     ) -> int:

@@ -57,3 +57,7 @@ class utils:
                 60
             )
         return hours, minutes, seconds
+
+
+#псевдоним для класса
+UTILS = utils

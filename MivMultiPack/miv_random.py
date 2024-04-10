@@ -56,3 +56,7 @@ class AsyncRandom:
         hash = int(current_time[-3:])
         index = int(hash / 1000 * len(array))
         return array[index]
+
+
+#псевдоним для класса
+ASYNCRANDOM = AsyncRandom

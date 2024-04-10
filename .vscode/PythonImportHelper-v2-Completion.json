@@ -44,6 +44,15 @@
         "documentation": {}
     },
     {
+        "label": "LAVAPI",
+        "kind": 5,
+        "importPath": "MivMultiPack.miv_lavapi",
+        "description": "MivMultiPack.miv_lavapi",
+        "peekOfCode": "LAVAPI = lavapi",
+        "detail": "MivMultiPack.miv_lavapi",
+        "documentation": {}
+    },
+    {
         "label": "AsyncRandom",
         "kind": 6,
         "importPath": "MivMultiPack.miv_random",
@@ -53,11 +62,29 @@
         "documentation": {}
     },
     {
+        "label": "ASYNCRANDOM",
+        "kind": 5,
+        "importPath": "MivMultiPack.miv_random",
+        "description": "MivMultiPack.miv_random",
+        "peekOfCode": "ASYNCRANDOM = AsyncRandom",
+        "detail": "MivMultiPack.miv_random",
+        "documentation": {}
+    },
+    {
         "label": "utils",
         "kind": 6,
         "importPath": "MivMultiPack.miv_utils",
         "description": "MivMultiPack.miv_utils",
         "peekOfCode": "class utils:\n    def __init__(\n            self\n        ) -> None:\n        self.translit_dict = {\n            'a': 'а', 'b': 'б', 'c': 'ц', 'd': 'д', 'e': 'е', 'f': 'ф', 'g': 'г',\n            'h': 'х', 'i': 'и', 'j': 'й', 'k': 'к', 'l': 'л', 'm': 'м', 'n': 'н',\n            'o': 'о', 'p': 'п', 'q': 'к', 'r': 'р', 's': 'с', 't': 'т', 'u': 'у',\n            'v': 'в', 'w': 'в', 'x': 'кс', 'y': 'й', 'z': 'з',\n            'A': 'А', 'B': 'Б', 'C': 'Ц', 'D': 'Д', 'E': 'Е', 'F': 'Ф', 'G': 'Г',",
+        "detail": "MivMultiPack.miv_utils",
+        "documentation": {}
+    },
+    {
+        "label": "UTILS",
+        "kind": 5,
+        "importPath": "MivMultiPack.miv_utils",
+        "description": "MivMultiPack.miv_utils",
+        "peekOfCode": "UTILS = utils",
         "detail": "MivMultiPack.miv_utils",
         "documentation": {}
     }
